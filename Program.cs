@@ -8,12 +8,9 @@ using System.Threading.Tasks;
 namespace AnalyzeImageInStreamAsync
 {
     class Program
-    {   // subscriptionKey = "tamduong"
+    {  
         private const string subscriptionKey = "tamduong";
-
-        // localImagePath = @"C:\Documents\LocalImage.jpg"
         private const string localImagePath = @"E:\bodystyle\New folder (2)\image.PNG";
-
         private const string remoteImageUrl =
             "https://pngimage.net/wp-content/uploads/2018/06/png-imagenes-1.png";
 
@@ -31,14 +28,7 @@ namespace AnalyzeImageInStreamAsync
                   new ApiKeyServiceClientCredentials(subscriptionKey),
                   new System.Net.Http.DelegatingHandler[] { });
 
-            // You must use the same region as you used to get your subscription
-            // keys. For example, if you got your subscription keys from westus,
-            // replace "westcentralus" with "westus".
-            //
-            // Free trial subscription keys are generated in the "westus"
-            // region. If you use a free trial subscription key, you shouldn't
-            // need to change the region.
-
+         
             // Specify the Azure region
             computerVision.Endpoint = "https://tamduong.cognitiveservices.azure.com/vision/v2.0/analyze?visualFeatures=ImageType&details=Landmarks&language=en";
 
